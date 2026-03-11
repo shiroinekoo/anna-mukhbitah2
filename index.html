@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Mukhbitah | Elegance in Every Fold</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABEL CSS & RESET --- */
+        :root {
+            --primary-color: #D8A7B1; /* Dusty Pink */
+            --primary-dark: #C08591;
+            --secondary-color: #F9F5F0; /* Cream Background */
+            --accent-color: #A67B7E; /* Muted Brownish Pink */
+            --text-dark: #4A403A; /* Warm Dark Brown */
+            --text-light: #8C827B; /* Soft Grey */
+            --white: #FFFFFF;
+            --shadow-soft: 0 10px 30px rgba(74, 64, 58, 0.05);
+            --shadow-hover: 0 15px 40px rgba(74, 64, 58, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+
+        /* --- UTILITY CLASSES --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: var(--text-dark);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--text-dark);
+            background: transparent;
+            color: var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--text-dark);
+            color: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(249, 245, 240, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--primary-color); }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--text-dark); }
+
+        /* --- HERO SECTION --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://picsum.photos/seed/hero-hijab/1920/1080') no-repeat center center/cover;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        /* --- GALLERY & FILTER SECTION --- */
+        #gallery { background-color: var(--secondary-color); }
+
+        .filters-container {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        select, input[type="text"] {
+            padding: 10px 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            outline: none;
+            background: #fdfdfd;
+        }
+
+        select:focus, input:focus { border-color: var(--primary-color); }
+
+        .search-box {
+            position: relative;
+            flex-grow: 1;
+            max-width: 300px;
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            group: ;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-image {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            background: #f0f0f0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .overlay-actions {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        .product-card:hover .overlay-actions {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .btn-quick-view {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .btn-quick-view:hover { background: var(--primary-color); }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .product-price {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* --- ABOUT SECTION --- */
+        #about {
+            background-color: var(--white);
+        }
+
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        /* --- CONTACT SECTION --- */
+        #contact {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea { height: 120px; resize: vertical; }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links { margin-bottom: 20px; }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* --- MODAL (POPUP) --- */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            border-radius: 10px;
+            overflow-y: auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            animation: slideUp 0.4s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-gallery {
+            flex: 1;
+            min-width: 300px;
+            background: #f9f9f9;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            cursor: zoom-in;
+        }
+
+        .thumbnail-grid {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .thumb:hover, .thumb.active { opacity: 1; border: 2px solid var(--primary-color); }
+
+        .modal-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+
+        .detail-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .detail-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .detail-price {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .detail-desc {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .detail-specs {
+            margin-bottom: 25px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .spec-label { font-weight: 700; color: var(--text-dark); }
+        .spec-value { color: var(--text-light); text-align: right; }
+
+        .care-instruction {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            background: #fdfbf7;
+            padding: 10px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* --- LIGHTBOX --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 3000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        .lightbox.active { opacity: 1; visibility: visible; }
+        .lightbox img { max-width: 90%; max-height: 90vh; border: 5px solid var(--white); }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplifikasi untuk mobile: sembunyikan link */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-soft);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            
+            .hero-title { font-size: 2.5rem; }
+            .about-wrapper { flex-direction: column; }
+            
+            .modal-content { flex-direction: column; }
+            .main-img { height: 300px; }
+            .modal-details { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Anna <span>Mukhbitah</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#gallery">Koleksi</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Anna Mukhbitah</h1>
+            <p class="hero-tagline">"Elegance in Every Fold"</p>
+            <a href="#gallery" class="btn btn-primary">Lihat Galeri</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <span class="section-subtitle">Koleksi Terbaru</span>
+                <h2 class="section-title">Galeri Kerudung Eksklusif</h2>
+            </div>
+
+            <!-- Filter & Search -->
+            <div class="filters-container">
+                <div class="filter-group">
+                    <select id="colorFilter">
+                        <option value="all">Semua Warna</option>
+                        <option value="nude">Nude / Cream</option>
+                        <option value="dusty">Dusty Pink</option>
+                        <option value="pastel">Pastel</option>
+                        <option value="dark">Dark Tone</option>
+                    </select>
+                    <select id="modelFilter">
+                        <option value="all">Semua Model</option>
+                        <option value="pashmina">Pashmina</option>
+                        <option value="segifour">Segi Empat</option>
+                        <option value="instant">Instant / Pet</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari nama produk...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Produk akan di-render di sini oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/about-hijab/600/400" alt="Tentang Anna Mukhbitah">
+                </div>
+                <div class="about-text">
+                    <span class="section-subtitle">Tentang Brand</span>
+                    <h2 class="section-title">Cerita Anna Mukhbitah</h2>
+                    <p>Anna Mukhbitah lahir dari keinginan untuk menghadirkan kerudung yang tidak hanya menutup aurat, tetapi juga meningkatkan kepercayaan diri setiap wanita muslimah yang menggunakannya.</p>
+                    <p>Kami percaya bahwa kesederhanaan adalah bentuk tertinggi dari keanggunan. Setiap lipatan, setiap jahitan, dan pemilihan bahan dilakukan dengan penuh cinta untuk memastikan kenyamanan sepanjang hari.</p>
+                    <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <span class="section-subtitle">Hubungi Kami</span>
+                <h2 class="section-title">Kontak & Pemesanan</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-light);">Punya pertanyaan seputar bahan atau cara pemesanan? Jangan ragu untuk menghubungi kami.</p>
+                    
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 812 3456 7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@anna.mukhbitah</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="far fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@annamukhbitah.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pesan</label>
+                            <textarea placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Anna Mukhbitah</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Anna Mukhbitah. All Rights Reserved. Designed with Elegance.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-gallery">
+                <img src="" alt="Main Product" class="main-img" id="modalMainImg" onclick="openLightbox(this.src)">
+                <div class="thumbnail-grid" id="modalThumbnails">
+                    <!-- Thumbnails generated by JS -->
+                </div>
+            </div>
+            <div class="modal-details">
+                <span class="detail-category" id="modalCategory">Model</span>
+                <h2 class="detail-title" id="modalTitle">Nama Produk</h2>
+                <div class="detail-price" id="modalPrice">Rp 0</div>
+                <p class="detail-desc" id="modalDesc">Deskripsi produk...</p>
+                
+                <div class="detail-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Warna</span>
+                        <span class="spec-value" id="modalColor">-</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Bahan</span>
+                        <span class="spec-value" id="modalMaterial">-</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ukuran</span>
+                        <span class="spec-value" id="modalSize">-</span>
+                    </div>
+                </div>
+
+                <div class="care-instruction">
+                    <i class="fas fa-heart" style="color: var(--primary-color); margin-right: 5px;"></i>
+                    <span id="modalCare">Instruksi perawatan...</span>
+                </div>
+
+                <a href="#" id="modalWALink" class="btn btn-primary" style="width: 100%; text-align: center;">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" id="lightboxImg">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // --- DATA PRODUK ---
+        const products = [
+            {
+                id: 1,
+                name: "Satin Luxury Dusty Pink",
+                price: "Rp 85.000",
+                category: "pashmina",
+                color: "dusty",
+                material: "Satin Silk",
+                size: "175 x 75 cm",
+                image: "https://picsum.photos/seed/hijab1/400/500",
+                gallery: ["https://picsum.photos/seed/hijab1/400/500", "https://picsum.photos/seed/detail1a/400/500", "https://picsum.photos/seed/detail1b/400/500"],
+                description: "Pashmina satin dengan kilau elegan yang tidak licin. Sangat cocok untuk acara formal maupun semi-formal.",
+                care: "Cuci dengan tangan, jangan diperas terlalu kuat, setrika dengan suhu rendah."
+            },
+            {
+                id: 2,
+                name: "Plisket Premium Nude",
+                price: "Rp 65.000",
+                category: "segifour",
+                color: "nude",
+                material: "High Quality Plisket",
+                size: "110 x 110 cm",
+                image: "https://picsum.photos/seed/hijab2/400/500",
+                gallery: ["https://picsum.photos/seed/hijab2/400/500", "https://picsum.photos/seed/detail2a/400/500"],
+                description: "Hijab segi empat plisket yang tidak mudah kusut dan nyaman dipakai seharian.",
+                care: "Cuci kering (dry clean) atau cuci lembut, jangan dijahit sembarangan."
+            },
+            {
+                id: 3,
+                name: "Bella Square Pastel Blue",
+                price: "Rp 45.000",
+                category: "segifour",
+                color: "pastel",
+                material: "Cotton Bella",
+                size: "115 x 115 cm",
+                image: "https://picsum.photos/seed/hijab3/400/500",
+                gallery: ["https://picsum.photos/seed/hijab3/400/500", "https://picsum.photos/seed/detail3a/400/500"],
+                description: "Bahan katun yang adem dan mudah dibentuk. Warna pastel yang lembut mempercantik wajah.",
+                care: "Cuci mesin suhu rendah, setrika uap."
+            },
+            {
+                id:4,
+                name: "Instant Khimar Maroon",
+                price: "Rp 95.000",
+                category: "instant",
+                color: "dark",
+                material: "Ceruty Baby Doll",
+                size: "All Size (PD 90cm)",
+                image: "https://picsum.photos/seed/hijab4/400/500",
+                gallery: ["https://picsum.photos/seed/hijab4/400/500", "https://picsum.photos/seed/detail4a/400/500"],
+                description: "Khimar instant siap pakai dengan pet antem yang mengecilkan pipi. Bahan jatuh dan mengalir.",
+                care: "Jangan direndam lama, angin-anginkan saja."
+            },
+            {
+                id: 5,
+                name: "Voal Motif Floral",
+                price: "Rp 75.000",
+                category: "segifour",
+                color: "pastel",
+                material: "Voal Ultrafine",
+                size: "120 x 120 cm",
+                image: "https://picsum.photos/seed/hijab5/400/500",
+                gallery: ["https://picsum.photos/seed/hijab5/400/500", "https://picsum.photos/seed/detail5a/400/500"],
+                description: "Hijab voal dengan motif floral eksklusif. Tekstur ringan dan breathability tinggi.",
+                care: "Cuci dengan air dingin, hindari pemutih."
+            },
+            {
+                id: 6,
+                name: "Pashmina Ceruty Mocca",
+                price: "Rp 55.000",
+                category: "pashmina",
+                color: "nude",
+                material: "Ceruty Platinum",
+                size: "180 x 75 cm",
+                image: "https://picsum.photos/seed/hijab6/400/500",
+                gallery: ["https://picsum.photos/seed/hijab6/400/500", "https://picsum.photos/seed/detail6a/400/500"],
+                description: "Pashmina ceruty yang ringan banget seperti tidak memakai apa-apa. Mocca yang timeless.",
+                care: "Jangan disetrika langsung pada kain, gunakan kain pelapis."
+            },
+            {
+                id: 7,
+                name: "Rawis Elegant Black",
+                price: "Rp 50.000",
+                category: "segifour",
+                color: "dark",
+                material: "Rawis Premium",
+                size: "110 x 110 cm",
+                image: "https://picsum.photos/seed/hijab7/400/500",
+                gallery: ["https://picsum.photos/seed/hijab7/400/500", "https://picsum.photos/seed/detail7a/400/500"],
+                description: "Klasik, mewah, dan nyaman. Rawis dengan serat rapat dan premium.",
+                care: "Cuci tangan suhu ruang."
+            },
+            {
+                id: 8,
+                name: "Instant Sporty Grey",
+                price: "Rp 60.000",
+                category: "instant",
+                color: "pastel", // mapping simple
+                material: "Spandex Lexus",
+                size: "All Size",
+                image: "https://picsum.photos/seed/hijab8/400/500",
+                gallery: ["https://picsum.photos/seed/hijab8/400/500", "https://picsum.photos/seed/detail8a/400/500"],
+                description: "Cocok untuk aktivitas olahraga atau santai. Bahan strech yang menyerap keringat.",
+                care: "Cuci mesin bebas."
+            }
+        ];
+
+        // --- DOM ELEMENTS ---
+        const productGrid = document.getElementById('productGrid');
+        const searchInput = document.getElementById('searchInput');
+        const colorFilter = document.getElementById('colorFilter');
+        const modelFilter = document.getElementById('modelFilter');
+        
+        // Modal Elements
+        const modal = document.getElementById('productModal');
+        const modalMainImg = document.getElementById('modalMainImg');
+        const modalThumbnails = document.getElementById('modalThumbnails');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalColor = document.getElementById('modalColor');
+        const modalMaterial = document.getElementById('modalMaterial');
+        const modalSize = document.getElementById('modalSize');
+        const modalCare = document.getElementById('modalCare');
+        const modalWALink = document.getElementById('modalWALink');
+
+        // Lightbox Elements
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        // --- RENDER FUNCTION ---
+        function renderProducts(data) {
+            productGrid.innerHTML = '';
+            
+            if(data.length === 0) {
+                productGrid.innerHTML = '<p class="text-center" style="width:100%; grid-column: 1/-1;">Produk tidak ditemukan.</p>';
+                return;
+            }
+
+            data.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="overlay-actions">
+                            <button class="btn-quick-view" onclick="openModal(${product.id})">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-price">${product.price}</div>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
+        }
+
+        // --- FILTER & SEARCH LOGIC ---
+        function filterProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const colorValue = colorFilter.value;
+            const modelValue = modelFilter.value;
+
+            const filtered = products.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+                const matchesColor = colorValue === 'all' || product.color === colorValue;
+                const matchesModel = modelValue === 'all' || product.category === modelValue;
+
+                return matchesSearch && matchesColor && matchesModel;
+            });
+
+            renderProducts(filtered);
+        }
+
+        // Event Listeners for Filter
+        searchInput.addEventListener('input', filterProducts);
+        colorFilter.addEventListener('change', filterProducts);
+        modelFilter.addEventListener('change', filterProducts);
+
+        // --- MODAL LOGIC ---
+        function openModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            // Populate Data
+            modalMainImg.src = product.image;
+            modalTitle.textContent = product.name;
+            modalPrice.textContent = product.price;
+            modalDesc.textContent = product.description;
+            modalCategory.textContent = product.category.toUpperCase();
+            modalColor.textContent = capitalize(product.color);
+            modalMaterial.textContent = product.material;
+            modalSize.textContent = product.size;
+            modalCare.textContent = product.care;
+
+            // Populate Thumbnails
+            modalThumbnails.innerHTML = '';
+            product.gallery.forEach((imgSrc, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.className = `thumb ${index === 0 ? 'active' : ''}`;
+                thumb.onclick = () => {
+                    modalMainImg.src = imgSrc;
+                    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                };
+                modalThumbnails.appendChild(thumb);
+            });
+
+            // WhatsApp Link Logic
+            const message = `Halo Anna Mukhbitah, saya tertarik dengan produk ${product.name} (${product.price}). Apakah stok masih tersedia?`;
+            modalWALink.href = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // --- LIGHTBOX LOGIC ---
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        // --- UTILS ---
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        // Contact Form Dummy Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah kami terima (Mode Demo).');
+            this.reset();
+        });
+
+        // Initial Render
+        renderProducts(products);
+
+    </script>
+</body>
+</html>
